@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivio Circolari Ufficiali - Nome Azienda S.R.L.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <!-- Logo Placeholder -->
+                <div class="w-10 h-10 bg-blue-700 rounded-md flex items-center justify-center text-white font-bold text-xl">
+                    A
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-900 leading-tight">Nome Azienda S.R.L.</h1>
+                    <p class="text-xs text-slate-500 font-medium uppercase tracking-wide">Portale Comunicazioni</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 py-8">
+        
+        <div class="mb-8 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Archivio Circolari Ufficiali</h2>
+            <p class="text-slate-600">Tutte le comunicazioni ufficiali e gli aggiornamenti aziendali.</p>
+        </div>
+
+        <!-- Circulars List -->
+        <div class="space-y-4">
+
+            <!-- Item 1 -->
+            <a href="circolari/formazione-81-08.html" class="block group">
+                <article class="bg-white rounded-lg border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-200 p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div>
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Formazione</span>
+                            <span class="text-slate-400 text-xs">19 Nov 2025</span>
+                        </div>
+                        <h3 class="text-lg font-semibold text-slate-900 group-hover:text-blue-700 transition-colors">
+                            Formazione Obbligatoria Sicurezza D.Lgs 81/08
+                        </h3>
+                        <p class="text-slate-600 text-sm mt-1 line-clamp-2">
+                            Dettagli riguardanti il corso di aggiornamento obbligatorio sulla sicurezza sul lavoro previsto per tutti i dipendenti.
+                        </p>
+                    </div>
+                    <div class="text-blue-600 group-hover:translate-x-1 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                        </svg>
+                    </div>
+                </article>
+            </a>
+
+            <!-- Placeholder for empty state or more items -->
+            <!-- 
+            <div class="text-center py-10 text-slate-400 text-sm">
+                Non ci sono altre comunicazioni recenti.
+            </div>
+            -->
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-3xl mx-auto px-4 py-8 mt-8 border-t border-slate-200 text-center">
+        <p class="text-xs text-slate-400">&copy; 2025 Nome Azienda S.R.L. - Tutti i diritti riservati.</p>
+    </footer>
+
+</body>
+</html>
