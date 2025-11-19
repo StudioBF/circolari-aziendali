@@ -162,44 +162,12 @@
             </div>
         </div>
 
-        <div class="grid gap-6">
-            <!-- Card Item 1 -->
-            <a href="circolari/formazione-81-08.html" class="group block">
-                <article
-                    class="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-studio-blue/30 transition-all duration-300 overflow-hidden flex flex-col sm:flex-row">
-                    <!-- Date Column -->
-                    <div
-                        class="bg-studio-light/50 sm:w-32 p-6 flex flex-col items-center justify-center border-b sm:border-b-0 sm:border-r border-slate-100 group-hover:bg-studio-green/5 transition-colors">
-                        <span class="text-studio-green font-bold text-3xl">19</span>
-                        <span class="text-studio-grey uppercase text-xs font-bold tracking-wider mt-1">Nov 2025</span>
-                    </div>
-
-                    <!-- Content -->
-                    <div class="p-6 flex-1 flex flex-col justify-center">
-                        <div class="flex items-center gap-2 mb-2">
-                            <span
-                                class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">Formazione</span>
-                        </div>
-                        <h4
-                            class="text-xl font-bold text-slate-900 group-hover:text-studio-blue transition-colors mb-2">
-                            Formazione Obbligatoria Sicurezza D.Lgs 81/08
-                        </h4>
-                        <p class="text-slate-600 text-sm line-clamp-2">
-                            Convocazione per il corso di aggiornamento obbligatorio sulla salute e sicurezza nei luoghi
-                            di lavoro. Verifica le date e iscriviti.
-                        </p>
-                    </div>
-
-                    <!-- Arrow -->
-                    <div
-                        class="p-6 flex items-center justify-center text-slate-300 group-hover:text-studio-blue group-hover:translate-x-1 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                            stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                        </svg>
-                    </div>
-                </article>
-            </a>
+        <!-- Dynamic List Container -->
+        <div id="circolari-list" class="grid gap-6">
+            <!-- Circulars will be loaded here via JS -->
+            <div class="text-center py-12 text-slate-400 animate-pulse">
+                Caricamento circolari...
+            </div>
         </div>
     </main>
 
@@ -213,7 +181,8 @@
                         <img class="h-12 w-auto opacity-90" src="assets/logo.png" alt="Logo Footer">
                         <div>
                             <h4 class="font-bold text-studio-green text-lg">Studio Commerciale</h4>
-                            <p class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Fiorella Bernardo
+                            <p class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Fiorella
+                                Bernardo
                             </p>
                         </div>
                     </div>
@@ -298,6 +267,62 @@
                 riservati.</p>
         </div>
     </footer>
+
+    <!-- Dynamic Circulars Loader Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('circolari.json')
+                .then(response => response.json())
+                .then(data => {
+                    const listContainer = document.getElementById('circolari-list');
+                    listContainer.innerHTML = ''; // Clear loading state
+
+                    if (data.length === 0) {
+                        listContainer.innerHTML = '<div class="text-center py-8 text-slate-500">Nessuna circolare disponibile al momento.</div>';
+                        return;
+                    }
+
+                    data.forEach(circolare => {
+                        const cardHTML = `
+                            <a href="${circolare.file}" class="group block">
+                                <article class="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-xl hover:border-studio-blue/30 transition-all duration-300 overflow-hidden flex flex-col sm:flex-row">
+                                    <!-- Date Column -->
+                                    <div class="bg-studio-light/50 sm:w-32 p-6 flex flex-col items-center justify-center border-b sm:border-b-0 sm:border-r border-slate-100 group-hover:bg-studio-green/5 transition-colors">
+                                        <span class="text-studio-green font-bold text-3xl">${circolare.day}</span>
+                                        <span class="text-studio-grey uppercase text-xs font-bold tracking-wider mt-1">${circolare.month_year}</span>
+                                    </div>
+
+                                    <!-- Content -->
+                                    <div class="p-6 flex-1 flex flex-col justify-center">
+                                        <div class="flex items-center gap-2 mb-2">
+                                            <span class="bg-blue-50 text-blue-700 text-[10px] font-bold px-2 py-1 rounded uppercase tracking-wide">${circolare.category}</span>
+                                        </div>
+                                        <h4 class="text-xl font-bold text-slate-900 group-hover:text-studio-blue transition-colors mb-2">
+                                            ${circolare.title}
+                                        </h4>
+                                        <p class="text-slate-600 text-sm line-clamp-2">
+                                            ${circolare.description}
+                                        </p>
+                                    </div>
+
+                                    <!-- Arrow -->
+                                    <div class="p-6 flex items-center justify-center text-slate-300 group-hover:text-studio-blue group-hover:translate-x-1 transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </div>
+                                </article>
+                            </a>
+                        `;
+                        listContainer.insertAdjacentHTML('beforeend', cardHTML);
+                    });
+                })
+                .catch(error => {
+                    console.error('Errore nel caricamento delle circolari:', error);
+                    document.getElementById('circolari-list').innerHTML = '<div class="text-center py-8 text-red-500">Impossibile caricare le circolari. Riprova più tardi.</div>';
+                });
+        });
+    </script>
 
 </body>
 
