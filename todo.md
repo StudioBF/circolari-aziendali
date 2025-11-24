@@ -22,13 +22,7 @@ La sezione "Bacheca Circolari" deve diventare un'applicazione dinamica (Single P
   - Implementa un filtro in tempo reale (mentre si digita) che cerca in: Titolo, Sottotitolo, Descrizione e Target.
   - Il filtro deve aggiornare la vista immediatamente.
 
-### 2. Fix Header Visualizzatore ([circolari/index.html](cci:7://file:///e:/circolari-aziendali/circolari/index.html:0:0-0:0))
-- Modifica la barra di navigazione (`<nav>`) esistente.
-- Rendi l'intero blocco che contiene il **Logo** e il **Nome dello Studio** un unico link cliccabile che riporta alla homepage (`../index.html`).
-- Elimina il link testuale separato "Torna alla Home" che risulta ridondante.
-- **ATTENZIONE**: Assicurati di preservare la struttura HTML corretta (non cancellare `<body>` o `<nav>`) e le classi Tailwind esistenti.
-
 ### Vincoli Tecnici
-- Usa JavaScript puro (Vanilla JS) per la massima compatibilità e leggerezza, oppure suggerisci una micro-libreria solo se strettamente necessario per la reattività.
+- Usa JavaScript puro (Vanilla JS) per la massima compatibilità e leggerezza, oppure suggerisci una micro-libreria solo se strettamente necessario per la reattività e la facilità di manutenzione.
 - Il codice deve essere pulito, modulare e non deve richiedere un build system complesso.
 - Procedi passo dopo passo verificando che ogni modifica mantenga l'integrità della pagina.
