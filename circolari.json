@@ -2,11 +2,79 @@
     {
         "id": "formazione-settore-impiantistico",
         "title": "Obblighi Formazione Settore Impiantistico",
+        "subtitle": "Obblighi Inderogabili di Formazione Specifica per i Lavoratori del Settore Impiantistico",
+        "ref": "Rif. D.Lgs. 81/08",
+        "tag": "Circolare Informativa",
+        "target_audience": "Aziende del Settore Termoidraulico, Impiantistico, Caldaie e Fognatura",
         "description": "Obblighi inderogabili di formazione specifica per i lavoratori del settore impiantistico (D.Lgs. 81/08). Verifica i requisiti.",
         "date": "19 Nov 2025",
         "day": "19",
         "month_year": "Nov 2025",
         "category": "Formazione",
-        "file": "circolari/formazione-settore-impiantistico.html"
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Con la presente, si richiama l’attenzione sugli obblighi formativi e di sicurezza specifici che gravano sulle imprese operanti nell'installazione, manutenzione e riparazione di impianti, in ottemperanza al Decreto Legislativo 81/08 (Testo Unico sulla Salute e Sicurezza sul Lavoro) e alle normative collegate.",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "Codici ATECO Principali del Settore",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Le attività di installazione e manutenzione di impianti termici, idraulico-sanitari e fognari sono generalmente riconducibili ai seguenti codici ATECO:"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "43.22.01",
+                                "text": "Installazione di impianti idraulici, di riscaldamento e di condizionamento dell'aria (inclusa manutenzione e riparazione)."
+                            },
+                            {
+                                "highlight": "43.22.05",
+                                "text": "Installazione di altri impianti termo-idraulici (incluse tubazioni per acqua e acque reflue e attività di disotturazione)."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Obblighi di Formazione Specifica",
+                "number": "2",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "L'obbligo generale di formazione è stabilito dall'Articolo 37 del D.Lgs. 81/08. Per i rischi specifici del vostro settore, è necessario adempiere ai seguenti requisiti:"
+                    },
+                    {
+                        "type": "grid",
+                        "cards": [
+                            {
+                                "title": "Rischio Ambienti Confinati",
+                                "text": "Le operazioni in pozzetti, cunicoli, fognature, serbatoi e caldaie impongono la massima attenzione. Oltre agli Articoli 66 e 121 del D.Lgs. 81/08, è cruciale applicare il <strong>D.P.R. 177/2011</strong>, che richiede una formazione e addestramento pratico specifico e qualificante per tutti i lavoratori e preposti coinvolti in queste attività. L'impresa stessa deve essere qualificata secondo tale Decreto.",
+                                "color": "orange"
+                            },
+                            {
+                                "title": "Rischio Biologico",
+                                "text": "I lavori su reti fognarie e impianti di scarico espongono direttamente i lavoratori ad agenti patogeni. È obbligatoria la formazione specifica in base al <strong>Titolo X</strong> (es. Articoli 271 e 278) del D.Lgs. 81/08, che disciplina la valutazione del rischio e le misure di prevenzione per l'esposizione ad agenti biologici presenti nelle acque reflue.",
+                                "color": "teal"
+                            },
+                            {
+                                "title": "Rischio Chimico",
+                                "text": "L'uso, la manipolazione e lo stoccaggio di prodotti quali disincrostanti, detergenti, antigelo, combustibili o l'esposizione a gas di scarico/combustione richiedono la formazione prevista dal <strong>Titolo IX, Capo I</strong> (es. Articolo 227) del D.Lgs. 81/08. La formazione deve coprire le corrette procedure operative e l'uso dei Dispositivi di Protezione Individuale (DPI) adeguati.",
+                                "color": "blue"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

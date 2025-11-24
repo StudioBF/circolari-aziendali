@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circolare - Studio Commerciale Fiorella Bernardo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Century Gothic"', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        studio: {
+                            green: '#11826C',
+                            teal: '#17AE92',
+                            blue: '#178DBB',
+                            orange: '#F7A23F',
+                            grey: '#6F7E84',
+                            light: '#EBEBEB',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full top-0 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center gap-4">
+                    <!-- Logo (Link to Home) -->
+                    <a href="../index.html" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity">
+                        <img class="h-12 w-auto" src="../assets/logo.png" alt="Studio Bernardo Logo">
+                    </a>
+                    <!-- Brand Text -->
+                    <div class="hidden sm:block">
+                        <h1 class="text-lg font-bold text-studio-green leading-none">Studio Commerciale</h1>
+                        <p class="text-sm text-slate-600">Fiorella Bernardo</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="../index.html"
+                        class="flex items-center gap-2 text-studio-green hover:text-studio-teal transition-colors font-medium text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                            stroke="currentColor" class="w-4 h-4">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+                        </svg>
+                        Torna alla Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <main class="pt-32 pb-16 flex-grow">
+        <article id="circular-content" class="max-w-4xl mx-auto px-4 sm:px-6 hidden">
+
+            <!-- Header of the Circular -->
+            <header class="mb-10 text-center">
+                <div id="c-tag"
+                    class="inline-block py-1 px-3 rounded-full bg-studio-green/10 text-studio-green text-xs font-bold tracking-wide uppercase mb-4">
+                    Circolare Informativa
+                </div>
+                <h1 id="c-title"
+                    class="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight mb-4 leading-tight">
+                    <!-- Title -->
+                </h1>
+                <p id="c-ref" class="text-lg text-slate-500 font-medium">
+                    <!-- Ref -->
+                </p>
+            </header>
+
+            <!-- Main Content Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <!-- Target Audience Banner -->
+                <div class="bg-studio-light/30 border-b border-slate-100 p-6">
+                    <p class="font-semibold text-studio-grey">
+                        <span
+                            class="text-studio-green uppercase text-xs font-bold tracking-wider mr-2">Destinatari:</span>
+                        <span id="c-target"></span>
+                    </p>
+                </div>
+
+                <div id="c-body" class="p-8 sm:p-12 prose prose-slate max-w-none text-slate-600">
+                    <!-- Dynamic Content Blocks -->
+                </div>
+
+                <!-- Footer of the Card -->
+                <div class="bg-slate-50 border-t border-slate-100 p-8 text-center">
+                    <p class="text-sm text-slate-500 mb-6">
+                        Per maggiori informazioni o per pianificare i corsi di formazione obbligatori, contattare lo
+                        studio.
+                    </p>
+                    <a href="../index.html#contatti"
+                        class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-studio-green hover:bg-studio-teal shadow-md hover:shadow-lg transition-all">
+                        Contatta lo Studio
+                    </a>
+                </div>
+            </div>
+
+        </article>
+
+        <!-- Loading / Error State -->
+        <div id="loading-state" class="text-center py-20">
+            <p class="text-slate-500 animate-pulse">Caricamento circolare...</p>
+        </div>
+        <div id="error-state" class="hidden text-center py-20">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">Circolare non trovata</h2>
+            <p class="text-slate-500 mb-6">La circolare richiesta non è disponibile o è stata rimossa.</p>
+            <a href="../index.html" class="text-studio-green hover:underline">Torna alla Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-xs text-slate-400">&copy; 2025 Studio Commerciale Fiorella Bernardo. Tutti i diritti
+                riservati.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const params = new URLSearchParams(window.location.search);
+            const circularId = params.get('id');
+
+            if (!circularId) {
+                showError();
+                return;
+            }
+
+            // Updated path to fetch circolari.json from parent directory
+            fetch('../circolari.json')
+                .then(response => response.json())
+                .then(data => {
+                    const circular = data.find(c => c.id === circularId);
+                    if (circular) {
+                        renderCircular(circular);
+                    } else {
+                        showError();
+                    }
+                })
+                .catch(err => {
+                    console.error('Error loading circulars:', err);
+                    showError();
+                });
+        });
+
+        function showError() {
+            document.getElementById('loading-state').classList.add('hidden');
+            document.getElementById('circular-content').classList.add('hidden');
+            document.getElementById('error-state').classList.remove('hidden');
+        }
+
+        function renderCircular(data) {
+            // Set Meta Title
+            document.title = `${data.title} - Studio Commerciale Fiorella Bernardo`;
+
+            // Set Header Info
+            document.getElementById('c-tag').textContent = data.tag || 'Circolare Informativa';
+            document.getElementById('c-title').textContent = data.subtitle || data.title; // Use subtitle for main header if available
+            document.getElementById('c-ref').textContent = data.ref || '';
+            document.getElementById('c-target').textContent = data.target_audience || 'Tutti i clienti';
+
+            // Render Body Blocks
+            const container = document.getElementById('c-body');
+            container.innerHTML = '';
+
+            data.content.forEach(block => {
+                let html = '';
+                switch (block.type) {
+                    case 'paragraph':
+                        const className = block.style === 'lead' ? 'lead text-lg mb-8' : 'mb-4';
+                        html = `<p class="${className}">${block.text}</p>`;
+                        break;
+
+                    case 'separator':
+                        html = `<hr class="my-8 border-slate-100">`;
+                        break;
+
+                    case 'section':
+                        html = `
+                            <h3 class="text-xl font-bold text-studio-green mb-4 flex items-center gap-2 mt-8">
+                                <span class="bg-studio-green text-white w-6 h-6 rounded-full flex items-center justify-center text-xs">${block.number}</span>
+                                ${block.title}
+                            </h3>
+                        `;
+                        // Render nested blocks for section
+                        if (block.blocks) {
+                            block.blocks.forEach(subBlock => {
+                                html += renderSubBlock(subBlock);
+                            });
+                        }
+                        break;
+                }
+                container.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Show Content
+            document.getElementById('loading-state').classList.add('hidden');
+            document.getElementById('circular-content').classList.remove('hidden');
+        }
+
+        function renderSubBlock(block) {
+            switch (block.type) {
+                case 'paragraph':
+                    return `<p class="mb-4">${block.text}</p>`;
+
+                case 'list':
+                    let listItems = block.items.map(item => `
+                        <li class="flex gap-3">
+                            <span class="font-bold text-studio-blue min-w-[80px]">${item.highlight}</span>
+                            <span>${item.text}</span>
+                        </li>
+                    `).join('');
+                    return `<ul class="bg-slate-50 rounded-xl p-6 list-none space-y-4 mb-8 border border-slate-100">${listItems}</ul>`;
+
+                case 'grid':
+                    let cards = block.cards.map(card => {
+                        // Map colors to tailwind classes dynamically or use a safe list
+                        const colorMap = {
+                            'orange': 'orange',
+                            'teal': 'teal',
+                            'blue': 'blue',
+                            'green': 'emerald'
+                        };
+                        const c = colorMap[card.color] || 'gray';
+
+                        return `
+                            <div class="bg-${c}-50/50 border border-${c}-100 rounded-xl p-6 hover:shadow-md transition-shadow">
+                                <h4 class="text-lg font-bold text-slate-800 mb-2">${card.title}</h4>
+                                <p class="text-sm">${card.text}</p>
+                            </div>
+                        `;
+                    }).join('');
+                    return `<div class="grid gap-6 mb-8">${cards}</div>`;
+
+                default:
+                    return '';
+            }
+        }
+    </script>
+</body>
+
+</html>
