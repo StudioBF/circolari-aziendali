@@ -1,5 +1,93 @@
 [
     {
+        "id": "proroga-regime-fiscale-ets",
+        "title": "Proroga Regime Fiscale ETS",
+        "subtitle": "Proroga al 2036 delle norme sull'IVA per il Terzo Settore",
+        "ref": "Comunicazione Ufficiale",
+        "tag": "Circolare",
+        "target_audience": "Associazioni del Terzo Settore (ETS)",
+        "description": "Proroga dell'entrata in vigore del nuovo regime fiscale per gli Enti del Terzo Settore. Confermata l'applicazione del regime attuale anche per il 2026.",
+        "date": "24 Nov 2025",
+        "day": "24",
+        "month_year": "Nov 2025",
+        "category": "Fiscale",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "A tutte le associazioni del terzo settore, Buone notizie sul fronte fiscale. Vi aggiorniamo sulla recente decisione di prorogare l'entrata in vigore del nuovo regime fiscale per gli Enti del Terzo Settore (ETS) (Titolo X del D.Lgs. 117/2017).",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "Proroga e Mantenimento del Regime Attuale",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "L'obbligo di adeguamento alle nuove disposizioni IVA e di Imposte Dirette è stato ulteriormente posticipato oltre il 2026 a data da destinarsi."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "<strong>Cosa significa per Voi:</strong>"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Regime 2026",
+                                "text": "Per tutto l'esercizio 2026, e fino a nuova comunicazione, potrete continuare ad applicare il Vostro attuale regime fiscale agevolato, compreso il mantenimento delle attuali regole relative all'IVA."
+                            },
+                            {
+                                "highlight": "Decreto IVA",
+                                "text": "L'applicazione diretta e integrale delle modifiche al Decreto IVA (DPR 633/72) è rinviata."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Chiarimento Essenziale: Partita IVA (PIVA)",
+                "number": "2",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "È fondamentale distinguere la proroga dall'obbligo di dotarsi di Partita IVA. <strong>La proroga NON esenta dall'obbligo di Partita IVA se si svolgono attività commerciali.</strong>"
+                    },
+                    {
+                        "type": "grid",
+                        "cards": [
+                            {
+                                "title": "Obbligo Apertura P.IVA",
+                                "text": "L'obbligo è stabilito dal fatto che l'Ente svolga in modo abituale attività di natura commerciale (vendita di beni o erogazione di servizi a pagamento).",
+                                "color": "orange"
+                            },
+                            {
+                                "title": "Gestione Semplificata",
+                                "text": "Se il Vostro Ente svolge attività commerciale, la Partita IVA è comunque obbligatoria. La proroga Vi consente unicamente di gestire tale P.IVA applicando il regime fiscale attuale (più semplice) e non quello nuovo del CTS.",
+                                "color": "teal"
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "In sintesi, la proroga Vi permette di continuare con le attuali regole fiscali, ma non modifica i requisiti di base per l'apertura di una Partita IVA in caso di attività commerciale."
+                    }
+                ]
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "paragraph",
+                "text": "Lo Studio è a Vostra disposizione per valutare la Vostra specifica situazione fiscale."
+            }
+        ]
+    },
+    {
         "id": "formazione-settore-impiantistico",
         "title": "Obblighi Formazione Settore Impiantistico",
         "subtitle": "Obblighi Inderogabili di Formazione Specifica per i Lavoratori del Settore Impiantistico",
