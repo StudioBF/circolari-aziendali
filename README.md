@@ -11,11 +11,10 @@ Il sito è pubblicato su **GitHub Pages** e accessibile all'indirizzo:
 
 ```
 circolari-aziendali/
-├── index.html                          # Homepage principale
+├── index.html                          # Homepage
 ├── circolari.json                      # Database circolari (aggiorna qui!)
 ├── circolari/
-│   ├── formazione-settore-impiantistico.html
-│   └── template.html                   # Template per nuove circolari
+│   └── index.html                      # Viewer per le singole circolari
 ├── assets/
 │   └── logo.png                        # Logo dello studio
 └── README.md
@@ -23,50 +22,78 @@ circolari-aziendali/
 
 ## ✨ Caratteristiche
 
-- **Design Moderno e Responsive**: Interfaccia elegante ottimizzata per desktop e mobile
-- **Caricamento Dinamico**: Le circolari vengono caricate automaticamente da `circolari.json`
-- **Facile Manutenzione**: Aggiungi nuove circolari senza modificare il codice HTML
-- **Integrazione Social**: Collegamenti diretti ai canali Telegram e WhatsApp
-- **Mappa Interattiva**: Localizzazione ufficio con Google Maps integrato
+- **Design Moderno e Responsive**: Interfaccia elegante ottimizzata per desktop e mobile.
+- **Caricamento Dinamico**: Le circolari vengono generate automaticamente leggendo il file `circolari.json`.
+- **Facile Manutenzione**: Aggiungi nuove circolari modificando solo un file JSON.
+- **Integrazione Social**: Collegamenti diretti ai canali Telegram e WhatsApp.
+- **Mappa Interattiva**: Localizzazione ufficio con Google Maps integrato.
 
 ## 📝 Come Aggiungere una Nuova Circolare
 
-### 1. Crea il File HTML della Circolare
+Il sistema è interamente guidato dai dati. Non è necessario creare file HTML.
 
-Usa il template `circolari/template.html` come base:
+### 1. Modifica il File `circolari.json`
 
-```bash
-cp circolari/template.html circolari/nome-circolare.html
-```
+Aggiungi un nuovo oggetto all'inizio dell'array nel file `circolari.json`.
 
-Modifica il nuovo file inserendo:
-- Titolo della circolare
-- Destinatari
-- Contenuto completo
-
-### 2. Aggiorna il File `circolari.json`
-
-Aggiungi un nuovo oggetto all'array JSON:
+Ecco la struttura di base:
 
 ```json
 {
-    "id": "nome-circolare",
+    "id": "titolo-univoco-url",
     "title": "Titolo della Circolare",
-    "description": "Breve descrizione (max 2 righe)",
-    "date": "20 Nov 2025",
-    "day": "20",
+    "subtitle": "Sottotitolo esplicativo",
+    "ref": "Rif. Normativo",
+    "tag": "Tipo Documento",
+    "target_audience": "Pubblico di riferimento",
+    "description": "Breve descrizione per l'anteprima",
+    "date": "25 Nov 2025",
+    "day": "25",
     "month_year": "Nov 2025",
-    "category": "Categoria",
-    "file": "circolari/nome-circolare.html"
+    "category": "Fiscale",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Testo introduttivo...",
+            "style": "lead"
+        },
+        {
+            "type": "separator"
+        },
+        {
+            "type": "section",
+            "title": "Titolo Sezione",
+            "number": "1",
+            "blocks": [
+                {
+                    "type": "paragraph",
+                    "text": "Testo del paragrafo."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        { "highlight": "Punto 1", "text": "Dettaglio punto 1" },
+                        { "highlight": "Punto 2", "text": "Dettaglio punto 2" }
+                    ]
+                }
+            ]
+        }
+    ]
 }
 ```
 
-Le circolari più recenti dovrebbero essere inserite **all'inizio** dell'array per apparire per prime.
+### Tipi di Blocchi Supportati
 
-### 3. Pubblica su GitHub
+- **paragraph**: Paragrafo di testo semplice. Opzionale `style: "lead"` per il testo introduttivo.
+- **separator**: Linea divisoria orizzontale.
+- **section**: Una sezione numerata che può contenere altri blocchi (`blocks`).
+- **list**: Lista puntata. Ogni item ha `highlight` (grassetto) e `text`.
+- **grid**: Griglia di card colorate (utile per evidenziare rischi o punti chiave).
+
+### 2. Pubblica su GitHub
 
 ```bash
-git add .
+git add circolari.json
 git commit -m "Aggiungi nuova circolare: [titolo]"
 git push origin main
 ```
@@ -75,7 +102,7 @@ La circolare sarà automaticamente visibile sul sito entro pochi minuti!
 
 ## 🧪 Test Locale
 
-Per testare il sito localmente, avvia un server HTTP:
+Per testare il sito localmente, avvia un server HTTP (necessario per caricare il JSON):
 
 ```bash
 # Con Python 3
@@ -93,17 +120,8 @@ Apri il browser su `http://localhost:8000`
 
 - **HTML5** - Struttura semantica
 - **Tailwind CSS** (via CDN) - Styling moderno e responsive
-- **JavaScript Vanilla** - Caricamento dinamico delle circolari
+- **JavaScript** - Caricamento dinamico e rendering delle circolari
 - **GitHub Pages** - Hosting gratuito
-
-## 📋 Template delle Circolari
-
-Ogni circolare segue una struttura uniforme:
-- Header con navigazione coerente alla homepage
-- Badge categoria
-- Sezioni numerate con stile consistente
-- Card colorate per evidenziare informazioni importanti
-- Footer con contatti e link "Torna alla Home"
 
 ## 🔧 Configurazione GitHub Pages
 
@@ -111,8 +129,6 @@ Ogni circolare segue una struttura uniforme:
 2. Source: **Deploy from a branch**
 3. Branch: **main** / Cartella: **/ (root)**
 4. Salva
-
-Il sito sarà disponibile all'URL GitHub Pages del repository.
 
 ## 📞 Contatti
 
