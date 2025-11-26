@@ -16,7 +16,7 @@ circolari-aziendali/
 ├── circolari/
 │   └── index.html                      # Viewer per le singole circolari
 ├── assets/
-│   └── logo.png                        # Logo dello studio
+│   └── logo vettoriale.svg             # Logo dello studio
 └── README.md
 ```
 
