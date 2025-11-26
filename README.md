@@ -24,6 +24,9 @@ circolari-aziendali/
 
 - **Design Moderno e Responsive**: Interfaccia elegante ottimizzata per desktop e mobile.
 - **Caricamento Dinamico**: Le circolari vengono generate automaticamente leggendo il file `circolari.json`.
+- **Ricerca Live**: Filtro istantaneo per titolo e contenuto.
+- **Archivio Storico**: Organizzazione automatica per anno.
+- **Paginazione**: Navigazione ottimizzata con 5 elementi per pagina.
 - **Facile Manutenzione**: Aggiungi nuove circolari modificando solo un file JSON.
 - **Integrazione Social**: Collegamenti diretti ai canali Telegram e WhatsApp.
 - **Mappa Interattiva**: Localizzazione ufficio con Google Maps integrato.
@@ -120,7 +123,7 @@ Apri il browser su `http://localhost:8000`
 
 - **HTML5** - Struttura semantica
 - **Tailwind CSS** (via CDN) - Styling moderno e responsive
-- **JavaScript** - Caricamento dinamico e rendering delle circolari
+- **Alpine.js** (via CDN) - Gestione stato e reattività
 - **GitHub Pages** - Hosting gratuito
 
 ## 🔧 Configurazione GitHub Pages
