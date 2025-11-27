@@ -178,7 +178,7 @@
                 let html = '';
                 switch (block.type) {
                     case 'paragraph':
-                        const className = block.style === 'lead' ? 'lead text-lg mb-8' : 'mb-4';
+                        const className = block.style === 'lead' ? 'lead text-lg mb-8 text-justify' : 'mb-4 text-justify';
                         html = `<p class="${className}">${block.text}</p>`;
                         break;
 
@@ -212,7 +212,7 @@
         function renderSubBlock(block) {
             switch (block.type) {
                 case 'paragraph':
-                    return `<p class="mb-4">${block.text}</p>`;
+                    return `<p class="mb-4 text-justify">${block.text}</p>`;
 
                 case 'list':
                     const isVertical = block.style === 'vertical';
@@ -241,7 +241,7 @@
                         return `
                             <div class="bg-${c}-50/50 border border-${c}-100 rounded-xl p-6 hover:shadow-md transition-shadow">
                                 <h4 class="text-lg font-bold text-slate-800 mb-2">${card.title}</h4>
-                                <p class="text-sm">${card.text}</p>
+                                <p class="text-sm text-justify">${card.text}</p>
                             </div>
                         `;
                     }).join('');
