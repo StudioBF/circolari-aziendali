@@ -215,9 +215,13 @@
                     return `<p class="mb-4">${block.text}</p>`;
 
                 case 'list':
+                    const isVertical = block.style === 'vertical';
+                    const liClass = isVertical ? 'flex flex-col gap-1' : 'flex gap-3';
+                    const highlightClass = isVertical ? 'font-bold text-studio-blue' : 'font-bold text-studio-blue min-w-[80px]';
+
                     let listItems = block.items.map(item => `
-                        <li class="flex gap-3">
-                            <span class="font-bold text-studio-blue min-w-[80px]">${item.highlight}</span>
+                        <li class="${liClass}">
+                            <span class="${highlightClass}">${item.highlight}</span>
                             <span>${item.text}</span>
                         </li>
                     `).join('');
