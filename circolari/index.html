@@ -250,16 +250,34 @@
 
                 case 'list':
                     const isVertical = block.style === 'vertical';
-                    const liClass = isVertical ? 'flex flex-col gap-1' : 'flex gap-3';
-                    const highlightClass = isVertical ? 'font-bold text-studio-blue' : 'font-bold text-studio-blue min-w-[80px]';
 
-                    let listItems = block.items.map(item => `
-                        <li class="${liClass}">
-                            <span class="${highlightClass}">${item.highlight}</span>
-                            <span>${item.text}</span>
-                        </li>
-                    `).join('');
-                    return `<ul class="bg-slate-50 dark:bg-slate-800 rounded-xl p-6 list-none space-y-4 mb-8 border border-slate-100 dark:border-slate-700">${listItems}</ul>`;
+                    if (isVertical) {
+                        // Vertical list: Standard stacking (Highlight on top of Text)
+                        // Useful for when the highlight is a long section header
+                        let listItems = block.items.map(item => `
+                            <li>
+                                <div class="font-bold text-studio-blue mb-1">${item.highlight}</div>
+                                <div class="text-justify text-slate-600 dark:text-slate-300">${item.text}</div>
+                            </li>
+                        `).join('');
+                        return `<ul class="bg-slate-50 dark:bg-slate-800 rounded-xl p-6 list-none space-y-6 mb-8 border border-slate-100 dark:border-slate-700">${listItems}</ul>`;
+                    } else {
+                        // Horizontal/Grid list: Aligned columns
+                        // Mobile: 1 col (stack). Desktop: 2 cols [fit-content(30%)  1fr]
+
+                        let listItems = block.items.map(item => `
+                            <li class="contents">
+                                <span class="font-bold text-studio-blue text-left">${item.highlight}</span>
+                                <span class="text-justify text-slate-600 dark:text-slate-300">${item.text}</span>
+                            </li>
+                        `).join('');
+
+                        return `
+                            <ul class="bg-slate-50 dark:bg-slate-800 rounded-xl p-6 mb-8 border border-slate-100 dark:border-slate-700 grid grid-cols-1 sm:grid-cols-[fit-content(30%)_1fr] gap-x-8 gap-y-4">
+                                ${listItems}
+                            </ul>
+                        `;
+                    }
 
                 case 'grid':
                     let cards = block.cards.map(card => {
