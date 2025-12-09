@@ -1,5 +1,86 @@
 [
     {
+        "id": "riforma-contante-2026",
+        "title": "Contante: Verso la Soglia dei 10.000 Euro",
+        "subtitle": "La Legge di Bilancio 2026 propone il raddoppio del limite, ma con una nuova tassa",
+        "ref": "Legge di Bilancio 2026",
+        "tag": "Novità Normativa",
+        "target_audience": "Tutte le imprese e consumatori",
+        "description": "Proposto l'innalzamento del tetto al contante a 10.000€, accompagnato da un'imposta di bollo fissa di 500€ per le transazioni sopra i 5.000€. Ecco cosa cambia.",
+        "date": "09 Dec 2025",
+        "day": "09",
+        "month_year": "Dec 2025",
+        "category": "Fiscale",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "La Legge di Bilancio 2026 introduce una novità rilevante per la gestione della liquidità: il limite all'uso del contante potrebbe salire a <strong>10.000 euro</strong>. Tuttavia, questa maggiore libertà avrà un costo: è prevista l'introduzione di un'imposta speciale di bollo per chi sceglie di pagare in contanti importi elevati.",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "Le Nuove Regole in Sintesi",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Il \"modello duale\" proposto dal Governo prevede:"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Nuova Soglia",
+                                "text": "Il limite per i pagamenti cash sale da 5.000€ a <strong>10.000€</strong>."
+                            },
+                            {
+                                "highlight": "La \"Tassa sul Contante\"",
+                                "text": "Per ogni transazione tra <strong>5.001€ e 10.000€</strong> sarà dovuta un'imposta di bollo fissa di <strong>500 euro</strong>."
+                            },
+                            {
+                                "highlight": "Adempimenti",
+                                "text": "Obbligo di richiedere <strong>fattura</strong> (non basta lo scontrino) su cui dovrà essere apposto un apposito \"contrassegno\" di pagamento della tassa."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Cosa cambia per le Aziende",
+                "number": "2",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Le implicazioni operative per gli esercenti e i professionisti sono significative:"
+                    },
+                    {
+                        "type": "grid",
+                        "cards": [
+                            {
+                                "title": "Incasso > 5.000€",
+                                "text": "Se un cliente vuole pagare 7.000€ in contanti, l'esercente dovrà verificare il pagamento della tassa di 500€ e conservare la fattura contrassegnata.",
+                                "color": "orange"
+                            },
+                            {
+                                "title": "Allineamento UE",
+                                "text": "La norma mira ad allineare l'Italia al tetto massimo europeo (Reg. UE 2024/1624), usando la leva fiscale come deterrente e strumento di tracciabilità.",
+                                "color": "blue"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "Lo Studio monitorerà l'iter di approvazione della norma e fornirà ulteriori dettagli operativi non appena disponibili i decreti attuativi."
+            }
+        ]
+    },
+    {
         "id": "obbligo-collegamento-pos-rt-2026",
         "title": "Obbligo Collegamento POS - Registratore Telematico",
         "subtitle": "Dal 2026: cosa cambia e come prepararsi",
