@@ -100,9 +100,12 @@
                     Circolare Informativa
                 </div>
                 <h1 id="c-title"
-                    class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-4 leading-tight">
+                    class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2 leading-tight">
                     <!-- Title -->
                 </h1>
+                <p id="c-subtitle" class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium mb-4 leading-snug">
+                    <!-- Subtitle -->
+                </p>
                 <p id="c-ref" class="text-lg text-slate-500 dark:text-slate-400 font-medium">
                     <!-- Ref -->
                 </p>
@@ -200,7 +203,8 @@
 
             // Set Header Info
             document.getElementById('c-tag').textContent = data.tag || 'Circolare Informativa';
-            document.getElementById('c-title').textContent = data.subtitle || data.title; // Use subtitle for main header if available
+            document.getElementById('c-title').textContent = data.title;
+            document.getElementById('c-subtitle').textContent = data.subtitle || '';
             document.getElementById('c-ref').textContent = data.ref || '';
             document.getElementById('c-target').textContent = data.target_audience || 'Tutti i clienti';
 
