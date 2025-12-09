@@ -17,8 +17,15 @@ Per ogni file `.md` trovato:
     *   Converti il contenuto in un oggetto JSON valido seguendo rigorosamente lo schema del DB (vedi regole sotto).
     *   Assicurati che `id` sia `lowercase-con-trattini` e univoco.
 
-2.  **Generazione Script di Inserimento**:
-    Non cercare di manipolare il JSON manualmente. Crea un file temporaneo `temp_insert_circular.py` con i dati JSON *già inclusi* nel codice. Questo metodo è infallibile per evitare errori di sintassi.
+2.  **Revisione Editoriale e Sintesi**:
+    *   **NON** copiare e incollare il contenuto del Markdown.
+    *   **Agisci come un Caporedattore**: Leggi il testo, scarta refusi, commenti AI o ricerche superflue.
+    *   Estrai solo le notizie rilevanti: Date, Obblighi, Sanzioni, Novità.
+    *   Riscrivi il testo in stile "News Aziendale": conciso, professionale, paragrafi brevi.
+    *   Tempo di lettura target: < 2 minuti.
+
+3.  **Generazione Script di Inserimento**:
+    Crea un file temporaneo `temp_insert_circular.py` con il contenuto JSON *già revisionato e sintetizzato*.
 
     **Template Script:**
     ```python
