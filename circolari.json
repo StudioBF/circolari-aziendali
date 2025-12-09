@@ -1,5 +1,251 @@
 [
     {
+        "id": "obbligo-collegamento-pos-rt-2026",
+        "title": "Obbligo Collegamento POS - Registratore Telematico",
+        "subtitle": "Dal 2026: cosa cambia e come prepararsi",
+        "ref": "Legge di Bilancio 2025",
+        "tag": "Normativa",
+        "target_audience": "Esercenti (Commercianti, Artigiani, Ristoratori)",
+        "description": "Dal 1° gennaio 2026 scatta l'obbligo di collegamento tra POS e Registratore di Cassa. Guida completa a scadenze, adempimenti e sanzioni.",
+        "date": "09 Dec 2025",
+        "day": "09",
+        "month_year": "Dec 2025",
+        "category": "Fiscale",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Vi informiamo che la Legge di Bilancio 2025 ha introdotto un’importante novità che impatterà sulla gestione quotidiana del punto vendita a partire dal <strong>1° gennaio 2026</strong>. L'obiettivo della norma è garantire che ogni incasso elettronico corrisponda esattamente a un documento commerciale emesso, istituendo l'obbligo di un <strong>'collegamento univoco'</strong> tra POS e Registratore Telematico (RT).",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "1. Chi è obbligato?",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "L’obbligo riguarda praticamente <strong>tutti gli esercenti</strong> che: 1) Emettono scontrino fiscale tramite Registratore Telematico; 2) Accettano pagamenti elettronici."
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "<strong>Sono esclusi:</strong> Solo coloro che certificano i ricavi esclusivamente tramite Fattura Elettronica e non possiedono un RT."
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "2. Devo comprare un nuovo POS o una nuova Cassa?",
+                "number": "2",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "<strong>Nella maggior parte dei casi, NO.</strong> La normativa prevede un 'collegamento logico' e non fisco."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Non serve chiamare l'elettricista",
+                                "text": "Non è obbligatorio collegare fisicamente il POS alla cassa con un cavo."
+                            },
+                            {
+                                "highlight": "Non serve cambiare hardware",
+                                "text": "Se i vostri apparecchi sono recenti e funzionanti, l'adeguamento è una procedura amministrativa online."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "3. In cosa consiste l'adeguamento?",
+                "number": "3",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Si tratterà di accedere al portale 'Fatture e Corrispettivi' dell'Agenzia delle Entrate e 'associare' la matricola del Registratore di Cassa al codice identificativo del POS."
+                    },
+                    {
+                        "type": "grid",
+                        "cards": [
+                            {
+                                "title": "Tutti i POS Inclusi",
+                                "text": "L'obbligo vale per <strong>tutti</strong> i tipi di POS, inclusi quelli portatili, SmartPOS, SumUp e wallet digitali come <strong>Satispay</strong>.",
+                                "color": "orange"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "4. Le Scadenze",
+                "number": "4",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "L'Agenzia delle Entrate renderà disponibile la procedura web presumibilmente a <strong>marzo 2026</strong>."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Per i POS già attivi",
+                                "text": "Scadenza probabile verso <strong>metà aprile 2026</strong> (45 giorni dall'apertura del portale)."
+                            },
+                            {
+                                "highlight": "Per i nuovi POS",
+                                "text": "(Attivati da febbraio 2026 in poi): Entro la fine del mese successivo all'attivazione."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "5. Cosa cambia nel lavoro di tutti i giorni?",
+                "number": "5",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Dal 2026 non sarà più tollerata la discrepanza tra metodo di pagamento battuto e reale."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Vietato sbagliare tasto",
+                                "text": "Se il cliente paga con carta, DOVETE premere 'Pagamento Elettronico/Carta'. Se premete 'Contanti', l'Agenzia rileverà l'anomalia."
+                            },
+                            {
+                                "highlight": "Consiglio",
+                                "text": "Valutate il 'collegamento integrato' (fisico) per far passare automaticamente l'importo dalla cassa al POS ed evitare errori."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "6. Le Sanzioni",
+                "number": "6",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "La mancata associazione comporta:"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Multa",
+                                "text": "Da 1.000 a 4.000 euro."
+                            },
+                            {
+                                "highlight": "Sospensione Attività",
+                                "text": "Da 15 giorni a 2 mesi."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Cosa fare adesso?",
+                "number": "7",
+                "blocks": [
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "1. Recuperate credenziali",
+                                "text": "Accesso al sito Agenzia Entrate."
+                            },
+                            {
+                                "highlight": "2. Censimento POS",
+                                "text": "Verificate quanti POS avete e di che banca."
+                            },
+                            {
+                                "highlight": "3. Istruite personale",
+                                "text": "Abituatevi a selezionare correttamente il metodo di pagamento."
+                            }
+                        ]
+                    },
+                    {
+                        "type": "paragraph",
+                        "text": "Lo Studio monitorerà l'uscita dei provvedimenti attuativi e vi contatterà a inizio 2026."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "variazione-orari-apertura-dic-2025",
+        "title": "Variazione Orari di Apertura al Pubblico",
+        "subtitle": "Validi a partire dal 9 dicembre 2025",
+        "ref": "Avviso Interno",
+        "tag": "Avviso",
+        "target_audience": "Gentile Clientela",
+        "description": "Comunicazione importante sulla variazione degli orari di apertura al pubblico a partire dal 9 dicembre 2025: anticipo orario pomeridiano.",
+        "date": "09 Dec 2025",
+        "day": "09",
+        "month_year": "Dec 2025",
+        "category": "Avvisi",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "Gentili Clienti, con la presente si comunica che, nell'ottica di migliorare l'efficienza organizzativa dello Studio, a partire da <strong>martedì 9 dicembre 2025</strong> entrerà in vigore il nuovo orario di apertura al pubblico. La variazione riguarda esclusivamente la fascia pomeridiana, che verrà anticipata di 30 minuti.",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "Nuovi Orari di Apertura",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "<strong>(Validi da martedì 9 dicembre 2025)</strong>"
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "LUNEDÌ",
+                                "text": "09:00 – 13:00 | 16:00 – 19:00"
+                            },
+                            {
+                                "highlight": "MARTEDÌ",
+                                "text": "09:00 – 13:00 | 16:00 – 19:00"
+                            },
+                            {
+                                "highlight": "MERCOLEDÌ",
+                                "text": "09:00 – 13:00 | 16:00 – 19:00"
+                            },
+                            {
+                                "highlight": "GIOVEDÌ",
+                                "text": "09:00 – 13:00 | 16:00 – 19:00"
+                            },
+                            {
+                                "highlight": "VENERDÌ",
+                                "text": "09:00 – 13:00 | 16:00 – 19:00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "paragraph",
+                "text": "Si ricorda che per pratiche specifiche o consulenze dedicate è sempre consigliabile fissare un appuntamento contattando la segreteria. Certi di aver fatto cosa gradita nell'informarVi tempestivamente, porgiamo i nostri più Cordiali saluti."
+            }
+        ]
+    },
+    {
         "id": "obbligo-assicurazione-catastrofali-2025",
         "title": "Nuovo Obbligo di Assicurazione contro i Rischi Catastrofali",
         "subtitle": "Legge di Bilancio 2024: Cosa cambia per le imprese",
