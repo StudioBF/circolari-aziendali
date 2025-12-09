@@ -103,12 +103,24 @@
                     class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight mb-2 leading-tight">
                     <!-- Title -->
                 </h1>
-                <p id="c-subtitle" class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium mb-4 leading-snug">
+                <p id="c-subtitle"
+                    class="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium mb-4 leading-snug">
                     <!-- Subtitle -->
                 </p>
-                <p id="c-ref" class="text-lg text-slate-500 dark:text-slate-400 font-medium">
+                <p id="c-ref" class="text-lg text-slate-500 dark:text-slate-400 font-medium mb-6">
                     <!-- Ref -->
                 </p>
+
+                <!-- Social Share Button -->
+                <button onclick="copySocialPost()" id="share-btn"
+                    class="inline-flex items-center gap-2 px-5 py-2.5 bg-studio-blue/10 hover:bg-studio-blue/20 text-studio-blue font-semibold rounded-full transition-colors group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:scale-110 transition-transform"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                    Condividi
+                </button>
             </header>
 
             <!-- Main Content Card -->
@@ -180,6 +192,7 @@
                 .then(data => {
                     const circular = data.find(c => c.id === circularId);
                     if (circular) {
+                        window.currentCircular = circular; // Store globally for share feature
                         renderCircular(circular);
                     } else {
                         showError();
@@ -306,6 +319,39 @@
                 default:
                     return '';
             }
+        }
+
+        function copySocialPost() {
+            if (!window.currentCircular) return;
+
+            const c = window.currentCircular;
+            const url = window.location.href;
+
+            // Template for WhatsApp/Telegram
+            const text = `📢 *Nuova Circolare - Studio Bernardo*\n\n📄 *${c.title}*\n_${c.subtitle || ''}_\n\n${c.description || ''}\n\n👇 *Leggi l'approfondimento:*\n${url}\n\n#StudioBernardo #Aggiornamento #${c.category || 'News'}`;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('share-btn');
+                const originalContent = btn.innerHTML;
+
+                btn.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                    </svg>
+                    Copiato!
+                `;
+                btn.classList.add('bg-green-100', 'text-green-700');
+                btn.classList.remove('bg-studio-blue/10', 'text-studio-blue');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.classList.remove('bg-green-100', 'text-green-700');
+                    btn.classList.add('bg-studio-blue/10', 'text-studio-blue');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Impossibile copiare il testo.');
+            });
         }
     </script>
     <script>
