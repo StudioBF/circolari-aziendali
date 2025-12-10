@@ -145,6 +145,28 @@ Corso San Benedetto, 170
 - ✉️ Email: bernardo.fiorella@gmail.com
 - 📧 PEC: bernardo.fiorella@pec.it
 
+## 🛡️ Funzionalità Admin & Bot Telegram
+
+Il sito include una modalità amministratore nascosta per facilitare la pubblicazione delle circolari sul canale Telegram ufficiale.
+
+### Modalità Admin
+- **Attivazione**: Clicca 5 volte rapidamente sul logo dello studio nella homepage.
+- **Indicatore**: Un'icona a forma di scudo verde apparirà nella barra di navigazione quando la modalità è attiva.
+- **Funzioni**: Nelle pagine delle singole circolari apparirà il pulsante **"Pubblica"**.
+
+### Bot Telegram (FioberBot)
+Il sistema include uno script Python (`telegram_publisher.py`) per inviare le circolari ai canali Telegram.
+
+**Caratteristiche:**
+- **Avvio Rapido**: Doppio click su `Avvia Bot.bat` per lanciare il server.
+- **Dual Channel**: Supporta la pubblicazione sia sul **Canale Ufficiale** che su un **Canale di Test**.
+- **Interfaccia Interattiva**: Il bot risponde con pulsanti per confermare la pubblicazione e scegliere la destinazione.
+- **Link Eleganti**: I post sul canale includono un pulsante "🔗 Leggi l'approfondimento" invece di link testuali grezzi.
+
+**Requisiti:**
+- Python installato.
+- File `config_secrets.json` configurato con Token e ID dei canali.
+
 ---
 
 © 2025 Studio Commerciale Fiorella Bernardo - Tutti i diritti riservati

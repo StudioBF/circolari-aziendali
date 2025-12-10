@@ -217,7 +217,6 @@ def main():
                                 admin_markup = {"inline_keyboard": buttons}
                                 
                                 send_message(user_id, body, admin_markup)
-                                send_message(user_id, "Scegli la destinazione:")
                             else:
                                 send_message(user_id, f"❌ Errore: Circolare '{circular_id}' non trovata.")
                             continue

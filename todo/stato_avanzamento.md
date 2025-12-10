@@ -10,10 +10,17 @@
 - [x] Ricerca e Filtri (Anno, Testo)
 - [x] Bot Telegram (Script `telegram_publisher.py` funzionante)
 - [x] Sicurezza (Rimozione token, History rewrite)
+- [x] Funzionalità "Admin Mode" (5 click sul logo)
+- [x] Pulsante "Pubblica su Telegram" (visibile solo agli admin)
+- [x] Test finale pubblicazione
 
-## In Corso / Da Ripristinare
-- [ ] Funzionalità "Admin Mode" (5 click sul logo)
-- [ ] Pulsante "Pubblica su Telegram" (visibile solo agli admin)
+## Modernizzazione Bot (Dicembre 2025)
+- [x] Script di avvio automatico (`Avvia Bot.bat`)
+- [x] Indicatore visivo Admin (Scudo verde)
+- [x] Rimozione "ANTEPRIMA" dai messaggi
+- [x] Pulsanti interattivi (Inline Buttons) per Conferma/Annulla
+- [x] Supporto Dual Channel (Ufficiale vs Test)
+- [x] Pulsante Link nel canale (invece di URL raw)
 
 ## Da Fare
-- [ ] Test finale pubblicazione
+- [ ] Monitoraggio periodico aggiornamenti (opzionale)
