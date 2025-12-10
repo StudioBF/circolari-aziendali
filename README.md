@@ -157,11 +157,14 @@ Il sito include una modalità amministratore nascosta per facilitare la pubblica
 ### Bot Telegram (FioberBot)
 Il sistema include uno script Python (`telegram_publisher.py`) per inviare le circolari ai canali Telegram.
 
-**Caratteristiche:**
-- **Avvio Rapido**: Doppio click su `Avvia Bot.bat` per lanciare il server.
-- **Dual Channel**: Supporta la pubblicazione sia sul **Canale Ufficiale** che su un **Canale di Test**.
-- **Interfaccia Interattiva**: Il bot risponde con pulsanti per confermare la pubblicazione e scegliere la destinazione.
-- **Link Eleganti**: I post sul canale includono un pulsante "🔗 Leggi l'approfondimento" invece di link testuali grezzi.
+**Avvio e Automazione:**
+
+1.  **Avvio Manuale (Debug)**: Usa `Avvia Bot.bat`. Apre una finestra nera dove puoi vedere i log e verificare che tutto funzioni. Utile per testare.
+2.  **Avvio Silente (Background)**: Usa `FioberBot_Background.vbs`.
+    *   Avvia il bot senza finestre visibili.
+    *   Per farlo partire all'accensione del PC:
+        1.  Premi `Windows + R`, scrivi `shell:startup` e invio.
+        2.  Copia il file `FioberBot_Background.vbs` in questa cartella.
 
 **Requisiti:**
 - Python installato.
