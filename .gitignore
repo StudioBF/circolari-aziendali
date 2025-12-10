@@ -21,3 +21,6 @@ npm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+config_secrets.json
+config_secrets.json.bak
