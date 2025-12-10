@@ -136,9 +136,7 @@
                 </button>
 
                 <!-- Admin Publish Button -->
-                <a x-show="adminMode"
-                    x-bind:href="'https://t.me/FioberBot?start=publish_' + (window.currentCircular ? window.currentCircular.id : '')"
-                    target="_blank"
+                <a id="admin-publish-btn" x-show="adminMode" href="#" target="_blank"
                     class="inline-flex items-center gap-2 px-5 py-2.5 bg-[#24A1DE] hover:bg-[#1a8bb6] text-white font-semibold rounded-full transition-colors ml-2 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
@@ -250,6 +248,12 @@
             document.getElementById('c-subtitle').textContent = data.subtitle || '';
             document.getElementById('c-ref').textContent = data.ref || '';
             document.getElementById('c-target').textContent = data.target_audience || 'Tutti i clienti';
+
+            // Set Admin Publish Link
+            const publishBtn = document.getElementById('admin-publish-btn');
+            if (publishBtn) {
+                publishBtn.href = 'https://t.me/FioberBot?start=publish_' + data.id;
+            }
 
             // Render Body Blocks
             const container = document.getElementById('c-body');
