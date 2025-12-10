@@ -53,7 +53,8 @@
     </script>
 </head>
 
-<body class="bg-gray-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased flex flex-col min-h-screen">
+<body class="bg-gray-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 antialiased flex flex-col min-h-screen"
+    x-data="navController">
 
     <!-- Navigation -->
     <nav class="glass-nav fixed w-full top-0 z-50 shadow-sm">
@@ -62,11 +63,23 @@
                 <div class="flex items-center gap-4">
                     <!-- Logo -->
                     <div class="flex-shrink-0 flex items-center">
-                        <img class="h-12 w-auto" src="assets/logo vettoriale.svg" alt="Studio Bernardo Logo">
+                        <img class="h-12 w-auto cursor-pointer" src="assets/logo vettoriale.svg"
+                            alt="Studio Bernardo Logo" x-on:click.prevent="handleLogoClick()">
                     </div>
                     <!-- Brand Text -->
                     <div class="ml-2">
-                        <h1 class="text-xs sm:text-lg font-bold text-studio-green leading-none">Studio Commerciale</h1>
+                        <div class="flex items-center gap-2">
+                            <h1 class="text-xs sm:text-lg font-bold text-studio-green leading-none">Studio Commerciale
+                            </h1>
+                            <!-- Admin Indicator -->
+                            <svg x-show="adminMode" x-cloak xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 text-green-600 animate-pulse" viewBox="0 0 20 20" fill="currentColor"
+                                title="Modalità Admin Attiva">
+                                <path fill-rule="evenodd"
+                                    d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
                         <p class="text-[10px] sm:text-sm text-slate-600">Fiorella Bernardo</p>
                     </div>
                 </div>
@@ -494,6 +507,63 @@
                 }
             }
 
+        });
+    </script>
+    <!-- Toast Notification -->
+    <div x-show="showToast" x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 translate-y-2" x-transition:enter-end="opacity-100 translate-y-0"
+        x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0"
+        x-transition:leave-end="opacity-0 translate-y-2"
+        class="fixed bottom-5 right-5 z-50 px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 backdrop-blur-md border border-white/20"
+        :class="adminMode ? 'bg-green-600/90 text-white' : 'bg-gray-800/90 text-white'" style="display: none;">
+        <svg x-show="adminMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <svg x-show="!adminMode" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        <span x-text="toastMessage" class="font-medium"></span>
+    </div>
+
+    <!-- Navigation Controller (Admin Mode) -->
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('navController', () => ({
+                adminMode: localStorage.getItem('adminMode') === 'true',
+                clickCount: 0,
+                clickTimer: null,
+                showToast: false,
+                toastMessage: '',
+
+                handleLogoClick() {
+                    this.clickCount++;
+                    clearTimeout(this.clickTimer);
+
+                    if (this.clickCount >= 5) {
+                        this.toggleAdminMode();
+                        this.clickCount = 0;
+                    } else {
+                        this.clickTimer = setTimeout(() => {
+                            this.clickCount = 0;
+                        }, 500);
+                    }
+                },
+
+                toggleAdminMode() {
+                    this.adminMode = !this.adminMode;
+                    localStorage.setItem('adminMode', this.adminMode);
+
+                    this.toastMessage = this.adminMode ? 'Modalità Admin ATTIVATA' : 'Modalità Admin DISATTIVATA';
+                    this.showToast = true;
+                    setTimeout(() => {
+                        this.showToast = false;
+                    }, 3000);
+                }
+            }));
         });
     </script>
 </body>
