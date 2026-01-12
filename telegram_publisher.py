@@ -9,7 +9,7 @@ import os
 
 # CONFIGURAZIONE INIZIALE
 CONFIG_FILE = "config_secrets.json"
-BASE_SITE_URL = "https://studiobf.github.io/circolari-aziendali" 
+BASE_SITE_URL = os.getenv("BASE_SITE_URL", "https://studiobf.github.io/circolari-aziendali") 
 
 # GLOBALS
 PENDING_CIRCULAR = None  # Stores the circular object awaiting confirmation

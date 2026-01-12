@@ -1,0 +1,43 @@
+services:
+  # --- SITO CIRCOLARI ---
+  circolari-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.circolari_web
+    container_name: circolari-web
+    restart: unless-stopped
+    volumes:
+      - ./circolari.json:/usr/share/nginx/html/circolari.json:ro
+      # Decommenta se modifichi le cartelle statiche sul server
+      # - ./imprese:/usr/share/nginx/html/imprese:ro 
+      # - ./circolari:/usr/share/nginx/html/circolari:ro
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.circolari.rule=Host(`circolari.fiorellabernardo.eu`)"
+      - "traefik.http.routers.circolari.entrypoints=websecure"
+      - "traefik.http.routers.circolari.tls.certresolver=myresolver"
+      - "traefik.http.services.circolari.loadbalancer.server.port=80"
+    networks:
+      - chat-stack_default
+
+  # --- FIOBER BOT (Telegram Multiuso) ---
+  fiober-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.fiober_bot
+    container_name: fiober-bot
+    restart: unless-stopped
+    depends_on:
+      - circolari-web
+    environment:
+      # L'URL base per generare i link (usato dal plugin circolari)
+      - BASE_SITE_URL=https://circolari.fiorellabernardo.eu
+    volumes:
+      - ./config_secrets.json:/app/config_secrets.json:ro
+      - ./circolari.json:/app/circolari.json:ro
+    networks:
+      - chat-stack_default
+
+networks:
+  chat-stack_default:
+    external: true

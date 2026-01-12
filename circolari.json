@@ -1,5 +1,122 @@
 [
     {
+        "id": "avviso-lavoro-giovani-calabria-2026",
+        "title": "Avviso Pubblico \"Lavoro Giovani Calabria\"",
+        "subtitle": "Tirocini Extracurriculari: 650€ al mese per assunzioni under 35",
+        "ref": "Regione Calabria",
+        "tag": "Avviso Pubblico",
+        "target_audience": "Giovani under 35 e Aziende",
+        "description": "Pubblicato l'avviso per il finanziamento di tirocini extracurriculari da 6 a 12 mesi. Indennità di 650€ mensili. Domande dal 26 gennaio 2026.",
+        "date": "12 Jan 2026",
+        "day": "12",
+        "month_year": "Jan 2026",
+        "category": "Lavoro",
+        "content": [
+            {
+                "type": "paragraph",
+                "text": "La <strong>Regione Calabria</strong> ha pubblicato l'avviso \"Lavoro Giovani Calabria\", una misura volta a favorire l'inserimento lavorativo dei giovani attraverso <strong>tirocini extracurriculari</strong> retribuiti. L'obiettivo è contrastare la fuga dei talenti e supportare le aziende locali nell'inserimento di nuove risorse.",
+                "style": "lead"
+            },
+            {
+                "type": "separator"
+            },
+            {
+                "type": "section",
+                "title": "Cosa Prevede l'Incentivo",
+                "number": "1",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "La misura finanzia percorsi di tirocinio svolti presso ditte e aziende con sede in Calabria."
+                    },
+                    {
+                        "type": "list",
+                        "items": [
+                            {
+                                "highlight": "Indennità Mensile",
+                                "text": "<strong>650,00 Euro</strong> corrisposti direttamente al tirocinante."
+                            },
+                            {
+                                "highlight": "Durata",
+                                "text": "Minimo <strong>6 mesi</strong>, massimo <strong>12 mesi</strong>."
+                            },
+                            {
+                                "highlight": "Impegno",
+                                "text": "Massimo 30 ore settimanali."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Destinatari (Chi può partecipare)",
+                "number": "2",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Possono accedere al beneficio i giovani con le seguenti caratteristiche:"
+                    },
+                    {
+                        "type": "list",
+                        "style": "vertical",
+                        "items": [
+                            {
+                                "highlight": "Età",
+                                "text": "Fino a <strong>35 anni</strong> non compiuti."
+                            },
+                            {
+                                "highlight": "Residenza",
+                                "text": "Residenti o domiciliati in Calabria."
+                            },
+                            {
+                                "highlight": "Stato",
+                                "text": "Profilati presso i Centri per l'Impiego (GOL Cluster 1, 2, 3)."
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Tempi e Modalità",
+                "number": "3",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Le domande devono essere presentate dai <strong>Soggetti Promotori</strong> (Centri per l'Impiego o Agenzie per il Lavoro accreditate) per conto dell'azienda ospitante."
+                    },
+                    {
+                        "type": "grid",
+                        "cards": [
+                            {
+                                "title": "Apertura Sportello",
+                                "text": "Dalle ore 09:00 del <strong>26 Gennaio 2026</strong>.",
+                                "color": "teal"
+                            },
+                            {
+                                "title": "Chiusura",
+                                "text": "Entro le ore 20:00 del <strong>27 Febbraio 2026</strong>.",
+                                "color": "orange"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "section",
+                "title": "Il Nostro Supporto",
+                "number": "4",
+                "blocks": [
+                    {
+                        "type": "paragraph",
+                        "text": "Lo Studio è a disposizione per verificare i requisiti dell'azienda ospitante e coordinarsi con i Soggetti Promotori ai fini della corretta attivazione del tirocinio."
+                    }
+                ]
+            }
+        ]
+    },
+    {
         "id": "riforma-contante-2026",
         "title": "Contante: Verso la Soglia dei 10.000 Euro",
         "subtitle": "La Legge di Bilancio 2026 propone il raddoppio del limite, ma con una nuova tassa",

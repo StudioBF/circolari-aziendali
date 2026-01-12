@@ -24,3 +24,7 @@ npm-debug.log*
 
 config_secrets.json
 config_secrets.json.bak
+
+# Local workspaces
+nuove_circolari/*
+!nuove_circolari/.gitkeep
