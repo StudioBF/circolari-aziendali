@@ -1,14 +1,14 @@
-# Circolari Aziendali - Legacy Repository
+# Circolari Aziendali - Repository Legacy
 
-⚠️ **WARNING: This repository is deprecated.**
+⚠️ **ATTENZIONE: Questo repository è deprecato.**
 
-The project has been migrated to a new server and domain. 
-This repository now serves only as a redirect mechanism.
+Il progetto è stato migrato su un nuovo server e dominio.
+Questo repository serve ora solo come meccanismo di reindirizzamento.
 
-## New Location
-All content is now available at:
+## Nuova Posizione
+Tutti i contenuti sono ora disponibili su:
 👉 **[https://circolari.fiorellabernardo.eu](https://circolari.fiorellabernardo.eu)**
 
-## Behavior
-- Accessing any old link (e.g., via GitHub Pages) will automatically redirect to the same path on the new domain.
-- This is handled via `index.html` and `404.html` (for deep linking support).
+## Comportamento
+- L'accesso a qualsiasi vecchio link (ad esempio, tramite GitHub Pages) reindirizzerà automaticamente allo stesso percorso sul nuovo dominio.
+- Questo viene gestito tramite `index.html` e `404.html` (per il supporto ai deep link).
